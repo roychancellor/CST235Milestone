@@ -50,6 +50,7 @@ public class Customer {
 	}
 
 	public Customer(String firstName, String lastName) {
+		// CST235 TASK: CUSTOMER INFORMATION MUST BE STORED IN A DB
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
