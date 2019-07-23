@@ -110,26 +110,26 @@ public class Bank {
 
 	// display and process loan payment
 	private void viewLoanPayment() {
-		customers.get(currentCustomer).getLoan().doCredit(Menus.userDblInput("How much to pay on your loan?"));
+		customers.get(currentCustomer).getLoan().doDebit(Menus.userDblInput("How much to pay on your loan?"));
 	}
 	
 	// display and process savings withdraw
 	private void viewWithdrawalSavings() {
-		customers.get(currentCustomer).getSaving().doCredit(Menus.userDblInput("How much to withdraw from savings?"));	
+		customers.get(currentCustomer).getSaving().doDebit(Menus.userDblInput("How much to withdraw from savings?"));	
 	}
 
 	// display and process checking withdraw
 	private void viewWithdrawalChecking() {
-		customers.get(currentCustomer).getChecking().doCredit(Menus.userDblInput("What is you check amount to withdraw from checking?"));			
+		customers.get(currentCustomer).getChecking().doDebit(Menus.userDblInput("What is you check amount to withdraw from checking?"));			
 	}
 
 	// display and process savings deposit
 	private void viewDepositSavings() {
-		customers.get(currentCustomer).getSaving().doDebit(Menus.userDblInput("How much to deposit into savings?"));	
+		customers.get(currentCustomer).getSaving().doCredit(Menus.userDblInput("How much to deposit into savings?"));	
 	}
 	// display and process checking deposit	
 	private void viewDepositChecking() {
-		customers.get(currentCustomer).getChecking().doDebit(Menus.userDblInput("How much to deposit into checking?"));	
+		customers.get(currentCustomer).getChecking().doCredit(Menus.userDblInput("How much to deposit into checking?"));	
 	}
 	
 	// display balances

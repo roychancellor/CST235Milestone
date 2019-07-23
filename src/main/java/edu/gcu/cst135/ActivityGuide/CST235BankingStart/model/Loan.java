@@ -19,13 +19,13 @@ public class Loan extends Account {
 		this.intRate = .02;
 	}
 
-	public void doCredit(double amt) {
+	public void doDebit(double amt) {
 		this.setAccountBalance(this.getAccountBalance() - amt);
 		isPaid = true;
 		addTransaction(amt, "Loan Payment");
 	}
 	
-	public void doDebit(double amt) {
+	public void doCredit(double amt) {
 		this.setAccountBalance(this.getAccountBalance() + amt);
 		addTransaction(amt, "Loan Withdrawal");
 	}

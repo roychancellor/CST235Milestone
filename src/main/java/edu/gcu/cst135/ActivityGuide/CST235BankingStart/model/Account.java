@@ -24,11 +24,11 @@ public abstract class Account implements iTrans {
 		this.accountBalance = accountBalance;
 	}
 	
-	public void doCredit(double amt) {			
+	public void doDebit(double amt) {			
 		this.setAccountBalance(this.getAccountBalance() - amt);
 	}
 	
-	public void doDebit(double amt) {
+	public void doCredit(double amt) {
 		this.setAccountBalance(this.getAccountBalance() + amt);
 	}
 

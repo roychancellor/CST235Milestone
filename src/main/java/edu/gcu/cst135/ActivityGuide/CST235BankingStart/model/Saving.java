@@ -18,12 +18,12 @@ public class Saving extends Account{
 		this.intRate = .01;
 	}
 	
-	public void doCredit(double amt) {
+	public void doDebit(double amt) {
 		this.setAccountBalance(this.getAccountBalance() - amt);
 		addTransaction(amt, "Savings Withdrawal");
 	}
 	
-	public void doDebit(double amt) {
+	public void doCredit(double amt) {
 		this.setAccountBalance(this.getAccountBalance() + amt);
 		addTransaction(amt, "Savings Deposit");
 	}

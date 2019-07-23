@@ -16,7 +16,7 @@ public class Checking extends Account {
 		this.overDraft = 25.00;
 	}
 	
-	public void doCredit(double amt) {
+	public void doDebit(double amt) {
 		if (this.getAccountBalance() < amt) {
 			Menus.printOut("Insufficient funds! Overdraft fee of $" + overDraft + " applied");
 			this.setAccountBalance(this.getAccountBalance() - overDraft);
@@ -27,7 +27,7 @@ public class Checking extends Account {
 
 	}
 	
-	public void doDebit(double amt) {
+	public void doCredit(double amt) {
 		this.setAccountBalance(this.getAccountBalance() + amt);
 		addTransaction(amt, "Checking Deposit");
 
